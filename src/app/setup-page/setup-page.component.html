@@ -3,19 +3,33 @@
 </head>
 <div class="setup-container">
   <div class="form-container">
-    <form class="players-form">
-      <mat-form-field class="player1" [(ngModel)]="">
-        <input matInput placeholder="Enter Player Name" value="Player1">
+      <mat-form-field class="playerInput" [(ngModel)]="scoreService.players.player1" name="player1" ngDefaultControl>
+        <input matInput placeholder="Enter Player Name">
       </mat-form-field>
-      <mat-form-field class="player2">
-        <input matInput placeholder="Enter Player Name" value="Player2">
+      <mat-form-field class="playerInput" [(ngModel)]="scoreService.players.player2" name="player2" ngDefaultControl>
+        <input matInput placeholder="Enter Player Name">
       </mat-form-field>
-      <mat-form-field class="player3">
-        <input matInput placeholder="Enter Player Name" value="Player3">
+      <mat-form-field class="playerInput" [(ngModel)]="scoreService.players.player3" name="player3" ngDefaultControl>
+        <input matInput placeholder="Enter Player Name">
       </mat-form-field>
-      <mat-form-field class="player4">
-        <input matInput placeholder="Enter Player Name" value="Player4">
+      <mat-form-field class="playerInput" [(ngModel)]="scoreService.players.player4" name="player4" ngDefaultControl>
+        <input matInput placeholder="Enter Player Name">
       </mat-form-field>
-    </form>
+      <mat-form-field [formControl]="course" name="course" ngDefaultControl>
+        <mat-select class="courseSelect" placeholder="Select Course" [(ngModel)]="scoreService.gameInfo.courseID">
+          <mat-option *ngFor="let course of courses" [value]="course.id">
+            {{ course.name }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    <mat-form-field [formControl]="tee" name="tee" ngDefaultControl>
+      <mat-select class="courseSelect" placeholder="Select Tee" [(ngModel)]="scoreService.gameInfo.teeType">
+        <mat-option *ngFor="let tee of tees" [value]="tee.id">
+          {{ tee.name }}
+        </mat-option>
+      </mat-select>
+
+    </mat-form-field>
+    <button mat-raised-button color="primary" (click)="logName();">Primary</button>
   </div>
 </div>
