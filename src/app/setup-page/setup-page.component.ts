@@ -34,6 +34,7 @@ export class SetupPageComponent implements OnInit {
   }
   createCourse() {
     this.api.getCourse(this.scoreService.gameInfo.courseID).subscribe(data => {
+      this.scoreService.gameInfo.courseName = data.data.name;
       for (let i = 0; i < 18; i++){
         this.scoreService.gameInfo.holes[i] = data.data.holes[i].teeBoxes[this.scoreService.gameInfo.teeType];
       }
@@ -42,6 +43,7 @@ export class SetupPageComponent implements OnInit {
   }
   async loadCourse(){
     await this.afs.collection('gameInfo').doc('game').ref.onSnapshot(doc => {
+      this.scoreService.gameInfo.courseName = doc.data().courseName;
       this.api.getCourse(doc.data().courseID).subscribe(data => {
         for (let i = 0; i < 18; i++) {
           this.scoreService.gameInfo.holes[i] = data.data.holes[i].teeBoxes[doc.data().teeType];

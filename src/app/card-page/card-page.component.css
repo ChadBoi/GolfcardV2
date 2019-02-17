@@ -1,0 +1,82 @@
+.container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.mainCardContainer {
+  height: 80%;
+  width: 82%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+}
+.playerContainer{
+  display: flex;
+  flex-direction: row;
+}
+.titleCardContainer {
+  height: 40px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+
+.saveButton{
+  margin-top: 20px;
+  align-self: center;
+  justify-self: center;
+  width: 400px;
+  height: 40px;
+}
+
+.firstRowItem{
+  border-top: black 1px solid;
+  width: 250px;
+  height: 40px;
+  padding: 0px 10px 0px 10px;
+  text-align: center;
+}
+
+.rowItem{
+  border-top: black 1px solid;
+  text-align: center;
+  width: 40px;
+  height: 40px;
+  padding: 0px 10px 0px 10px;
+}
+
+.last{
+  border-bottom: black 1px solid;
+}
+
+.rowInputItem{
+  text-align: center;
+  width: 40px;
+  height: 40px;
+  margin: 0px 10px 0px 10px;
+}
+
+.rowText{
+  display: inline-block;
+  position: relative;
+  top: 10px;
+  vertical-align: middle;
+}
+@media (max-width: 1550px) {
+  .mainCardContainer, .titleCardContainer, .container, body, html {
+    width: 1550px;
+  }
+  html{
+    overflow-y: scroll;
+  }
+}
+
+
+@media (max-width: 800px) {
+
+}

@@ -4,9 +4,363 @@
 <div class="container">
   <div class="mainCardContainer">
     <div class="titleCardContainer">
+      <div class="firstRowItem"><span class="rowText">{{this.scoreService.gameInfo.courseName}}</span></div>
+      <div class="rowItem"><span class="rowText">1</span></div>
+      <div class="rowItem"><span class="rowText">2</span></div>
+      <div class="rowItem"><span class="rowText">3</span></div>
+      <div class="rowItem"><span class="rowText">4</span></div>
+      <div class="rowItem"><span class="rowText">5</span></div>
+      <div class="rowItem"><span class="rowText">6</span></div>
+      <div class="rowItem"><span class="rowText">7</span></div>
+      <div class="rowItem"><span class="rowText">8</span></div>
+      <div class="rowItem"><span class="rowText">9</span></div>
+      <div class="rowItem"><span class="rowText">OUT</span></div>
+      <div class="rowItem"><span class="rowText">10</span></div>
+      <div class="rowItem"><span class="rowText">11</span></div>
+      <div class="rowItem"><span class="rowText">12</span></div>
+      <div class="rowItem"><span class="rowText">13</span></div>
+      <div class="rowItem"><span class="rowText">14</span></div>
+      <div class="rowItem"><span class="rowText">15</span></div>
+      <div class="rowItem"><span class="rowText">16</span></div>
+      <div class="rowItem"><span class="rowText">17</span></div>
+      <div class="rowItem"><span class="rowText">18</span></div>
+      <div class="rowItem"><span class="rowText">IN</span></div>
+      <div class="rowItem"><span class="rowText">Total</span></div>
+    </div>
+    <div class="titleCardContainer">
+      <div class="firstRowItem"><span class="rowText">Yards</span></div>
+      <div class="rowItem"><span class="rowText">{{ this.scoreService.gameInfo.holes[0].yards }}</span></div>
+      <div class="rowItem"><span class="rowText">{{ this.scoreService.gameInfo.holes[1].yards }}</span></div>
+      <div class="rowItem"><span class="rowText">{{ this.scoreService.gameInfo.holes[2].yards }}</span></div>
+      <div class="rowItem"><span class="rowText">{{ this.scoreService.gameInfo.holes[3].yards }}</span></div>
+      <div class="rowItem"><span class="rowText">{{ this.scoreService.gameInfo.holes[4].yards }}</span></div>
+      <div class="rowItem"><span class="rowText">{{ this.scoreService.gameInfo.holes[5].yards }}</span></div>
+      <div class="rowItem"><span class="rowText">{{ this.scoreService.gameInfo.holes[6].yards }}</span></div>
+      <div class="rowItem"><span class="rowText">{{ this.scoreService.gameInfo.holes[7].yards }}</span></div>
+      <div class="rowItem"><span class="rowText">{{ this.scoreService.gameInfo.holes[8].yards }}</span></div>
+      <div class="rowItem"></div>
+      <div class="rowItem"><span class="rowText">{{ this.scoreService.gameInfo.holes[9].yards }}</span></div>
+      <div class="rowItem"><span class="rowText">{{ this.scoreService.gameInfo.holes[10].yards }}</span></div>
+      <div class="rowItem"><span class="rowText">{{ this.scoreService.gameInfo.holes[11].yards }}</span></div>
+      <div class="rowItem"><span class="rowText">{{ this.scoreService.gameInfo.holes[12].yards }}</span></div>
+      <div class="rowItem"><span class="rowText">{{ this.scoreService.gameInfo.holes[13].yards }}</span></div>
+      <div class="rowItem"><span class="rowText">{{ this.scoreService.gameInfo.holes[14].yards }}</span></div>
+      <div class="rowItem"><span class="rowText">{{ this.scoreService.gameInfo.holes[15].yards }}</span></div>
+      <div class="rowItem"><span class="rowText">{{ this.scoreService.gameInfo.holes[16].yards }}</span></div>
+      <div class="rowItem"><span class="rowText">{{ this.scoreService.gameInfo.holes[17].yards }}</span></div>
+      <div class="rowItem"></div>
+      <div class="rowItem"></div>
+    </div>
+    <div class="titleCardContainer">
+      <div class="firstRowItem"><span class="rowText">Par</span></div>
+      <div class="rowItem"><span class="rowText">{{ this.scoreService.gameInfo.holes[0].par }}</span></div>
+      <div class="rowItem"><span class="rowText">{{ this.scoreService.gameInfo.holes[1].par }}</span></div>
+      <div class="rowItem"><span class="rowText">{{ this.scoreService.gameInfo.holes[2].par }}</span></div>
+      <div class="rowItem"><span class="rowText">{{ this.scoreService.gameInfo.holes[3].par }}</span></div>
+      <div class="rowItem"><span class="rowText">{{ this.scoreService.gameInfo.holes[4].par }}</span></div>
+      <div class="rowItem"><span class="rowText">{{ this.scoreService.gameInfo.holes[5].par }}</span></div>
+      <div class="rowItem"><span class="rowText">{{ this.scoreService.gameInfo.holes[6].par }}</span></div>
+      <div class="rowItem"><span class="rowText">{{ this.scoreService.gameInfo.holes[7].par }}</span></div>
+      <div class="rowItem"><span class="rowText">{{ this.scoreService.gameInfo.holes[8].par }}</span></div>
+      <div class="rowItem"></div>
+      <div class="rowItem"><span class="rowText">{{ this.scoreService.gameInfo.holes[9].par }}</span></div>
+      <div class="rowItem"><span class="rowText">{{ this.scoreService.gameInfo.holes[10].par }}</span></div>
+      <div class="rowItem"><span class="rowText">{{ this.scoreService.gameInfo.holes[11].par }}</span></div>
+      <div class="rowItem"><span class="rowText">{{ this.scoreService.gameInfo.holes[12].par }}</span></div>
+      <div class="rowItem"><span class="rowText">{{ this.scoreService.gameInfo.holes[13].par }}</span></div>
+      <div class="rowItem"><span class="rowText">{{ this.scoreService.gameInfo.holes[14].par }}</span></div>
+      <div class="rowItem"><span class="rowText">{{ this.scoreService.gameInfo.holes[15].par }}</span></div>
+      <div class="rowItem"><span class="rowText">{{ this.scoreService.gameInfo.holes[16].par }}</span></div>
+      <div class="rowItem"><span class="rowText">{{ this.scoreService.gameInfo.holes[17].par }}</span></div>
+      <div class="rowItem"></div>
+      <div class="rowItem"></div>
+    </div>
+    <div class="titleCardContainer">
+      <div class="firstRowItem"><span class="rowText">Handicap</span></div>
+      <div class="rowItem last"><span class="rowText">{{ this.scoreService.gameInfo.holes[0].hcp }}</span></div>
+      <div class="rowItem last"><span class="rowText">{{ this.scoreService.gameInfo.holes[1].hcp }}</span></div>
+      <div class="rowItem last"><span class="rowText">{{ this.scoreService.gameInfo.holes[2].hcp }}</span></div>
+      <div class="rowItem last"><span class="rowText">{{ this.scoreService.gameInfo.holes[3].hcp }}</span></div>
+      <div class="rowItem last"><span class="rowText">{{ this.scoreService.gameInfo.holes[4].hcp }}</span></div>
+      <div class="rowItem last"><span class="rowText">{{ this.scoreService.gameInfo.holes[5].hcp }}</span></div>
+      <div class="rowItem last"><span class="rowText">{{ this.scoreService.gameInfo.holes[6].hcp }}</span></div>
+      <div class="rowItem last"><span class="rowText">{{ this.scoreService.gameInfo.holes[7].hcp }}</span></div>
+      <div class="rowItem last"><span class="rowText">{{ this.scoreService.gameInfo.holes[8].hcp }}</span></div>
+      <div class="rowItem last"></div>
+      <div class="rowItem last"><span class="rowText">{{ this.scoreService.gameInfo.holes[9].hcp }}</span></div>
+      <div class="rowItem last"><span class="rowText">{{ this.scoreService.gameInfo.holes[10].hcp }}</span></div>
+      <div class="rowItem last"><span class="rowText">{{ this.scoreService.gameInfo.holes[11].hcp }}</span></div>
+      <div class="rowItem last"><span class="rowText">{{ this.scoreService.gameInfo.holes[12].hcp }}</span></div>
+      <div class="rowItem last"><span class="rowText">{{ this.scoreService.gameInfo.holes[13].hcp }}</span></div>
+      <div class="rowItem last"><span class="rowText">{{ this.scoreService.gameInfo.holes[14].hcp }}</span></div>
+      <div class="rowItem last"><span class="rowText">{{ this.scoreService.gameInfo.holes[15].hcp }}</span></div>
+      <div class="rowItem last"><span class="rowText">{{ this.scoreService.gameInfo.holes[16].hcp }}</span></div>
+      <div class="rowItem last"><span class="rowText">{{ this.scoreService.gameInfo.holes[17].hcp }}</span></div>
+      <div class="rowItem last"></div>
+      <div class="rowItem last"></div>
+    </div>
+  <div class="playerContainer">
+    <div class="firstRowItem"><span class="rowText">{{this.scoreService.players.player1}}</span></div>
+    <div class="inputContainer">
+    <mat-form-field class="rowInputItem"  (change)="updateScores();" [(ngModel)]="scoreService.players.scores1[0]" name="player1hole1" ngDefaultControl>
+      <input matInput [value]="this.scoreService.players.scores1[0]">
+    </mat-form-field>
+    <mat-form-field class="rowInputItem"  (change)="updateScores();" [(ngModel)]="scoreService.players.scores1[1]" name="player1hole2" ngDefaultControl>
+      <input matInput [value]="this.scoreService.players.scores1[1]">
+    </mat-form-field>
+    <mat-form-field class="rowInputItem"  (change)="updateScores();" [(ngModel)]="scoreService.players.scores1[2]" name="player1hole3" ngDefaultControl>
+      <input matInput [value]="this.scoreService.players.scores1[2]">
+    </mat-form-field>
+    <mat-form-field class="rowInputItem"  (change)="updateScores();" [(ngModel)]="scoreService.players.scores1[3]" name="player1hole4" ngDefaultControl>
+      <input matInput [value]="this.scoreService.players.scores1[3]">
+    </mat-form-field>
+    <mat-form-field class="rowInputItem"  (change)="updateScores();" [(ngModel)]="scoreService.players.scores1[4]" name="player1hole5" ngDefaultControl>
+      <input matInput [value]="this.scoreService.players.scores1[4]">
+    </mat-form-field>
+    <mat-form-field class="rowInputItem"  (change)="updateScores();" [(ngModel)]="scoreService.players.scores1[5]" name="player1hole6" ngDefaultControl>
+      <input matInput [value]="this.scoreService.players.scores1[5]">
+    </mat-form-field>
+    <mat-form-field class="rowInputItem"  (change)="updateScores();" [(ngModel)]="scoreService.players.scores1[6]" name="player1hole7" ngDefaultControl>
+      <input matInput [value]="this.scoreService.players.scores1[6]">
+    </mat-form-field>
+    <mat-form-field class="rowInputItem"  (change)="updateScores();" [(ngModel)]="scoreService.players.scores1[7]" name="player1hole8" ngDefaultControl>
+      <input matInput [value]="this.scoreService.players.scores1[7]">
+    </mat-form-field>
+    <mat-form-field class="rowInputItem"  (change)="updateScores();" [(ngModel)]="scoreService.players.scores1[8]" name="player1hole9" ngDefaultControl>
+      <input matInput [value]="this.scoreService.players.scores1[8]">
+    </mat-form-field>
+    </div>
+    <div class="rowItem"><span class="rowText">{{this.inScorePlayer1}}</span></div>
+    <div class="inputContainer">
+    <mat-form-field class="rowInputItem"  (change)="updateScores();" [(ngModel)]="scoreService.players.scores1[9]" name="player1hole10" ngDefaultControl>
+      <input matInput [value]="this.scoreService.players.scores1[9]">
+    </mat-form-field>
+    <mat-form-field class="rowInputItem" (change)="updateScores();" [(ngModel)]="scoreService.players.scores1[10]" name="player1hole11" ngDefaultControl>
+      <input matInput [value]="this.scoreService.players.scores1[10]">
+    </mat-form-field>
+    <mat-form-field class="rowInputItem" (change)="updateScores();" [(ngModel)]="scoreService.players.scores1[11]" name="player1hole12" ngDefaultControl>
+      <input matInput [value]="this.scoreService.players.scores1[11]">
+    </mat-form-field>
+    <mat-form-field class="rowInputItem"  (change)="updateScores();" [(ngModel)]="scoreService.players.scores1[12]" name="player1hole13" ngDefaultControl>
+      <input matInput [value]="this.scoreService.players.scores1[12]">
+    </mat-form-field>
+    <mat-form-field class="rowInputItem"  (change)="updateScores();" [(ngModel)]="scoreService.players.scores1[13]" name="player1hole14" ngDefaultControl>
+      <input matInput [value]="this.scoreService.players.scores1[13]">
+    </mat-form-field>
+    <mat-form-field class="rowInputItem"  (change)="updateScores();" [(ngModel)]="scoreService.players.scores1[14]" name="player1hole15" ngDefaultControl>
+      <input matInput [value]="this.scoreService.players.scores1[14]">
+    </mat-form-field>
+    <mat-form-field class="rowInputItem"  (change)="updateScores();" [(ngModel)]="scoreService.players.scores1[15]" name="player1hole16" ngDefaultControl>
+      <input matInput [value]="this.scoreService.players.scores1[15]">
+    </mat-form-field>
+    <mat-form-field class="rowInputItem"  (change)="updateScores();" [(ngModel)]="scoreService.players.scores1[16]" name="player1hole17" ngDefaultControl>
+      <input matInput [value]="this.scoreService.players.scores1[16]">
+    </mat-form-field>
+    <mat-form-field class="rowInputItem"  (change)="updateScores();" [(ngModel)]="scoreService.players.scores1[17]" name="player1hole18" ngDefaultControl>
+      <input matInput [value]="this.scoreService.players.scores1[17]">
+    </mat-form-field>
+    </div>
+    <div class="rowItem"><span class="rowText">{{this.outScorePlayer1}}</span></div>
+    <div class="rowItem"><span class="rowText">{{this.scoreService.players.totalScore1}}</span></div>
+  </div>
 
+
+    <div class="playerContainer">
+      <div class="firstRowItem"><span class="rowText">{{this.scoreService.players.player2}}</span></div>
+      <div class="inputContainer">
+        <mat-form-field class="rowInputItem" (change)="updateScores();" [(ngModel)]="scoreService.players.scores2[0]" name="player2hole1" ngDefaultControl>
+          <input matInput  [value]="this.scoreService.players.scores2[0]">
+        </mat-form-field>
+        <mat-form-field class="rowInputItem" (change)="updateScores();" [(ngModel)]="scoreService.players.scores2[1]" name="player2hole2" ngDefaultControl>
+          <input matInput  [value]="this.scoreService.players.scores2[1]">
+        </mat-form-field>
+        <mat-form-field class="rowInputItem" (change)="updateScores();" [(ngModel)]="scoreService.players.scores2[2]" name="player2hole3" ngDefaultControl>
+          <input matInput  [value]="this.scoreService.players.scores2[2]">
+        </mat-form-field>
+        <mat-form-field class="rowInputItem" (change)="updateScores();" [(ngModel)]="scoreService.players.scores2[3]" name="player2hole4" ngDefaultControl>
+          <input matInput  [value]="this.scoreService.players.scores2[3]">
+        </mat-form-field>
+        <mat-form-field class="rowInputItem" (change)="updateScores();" [(ngModel)]="scoreService.players.scores2[4]" name="player2hole5" ngDefaultControl>
+          <input matInput  [value]="this.scoreService.players.scores2[4]">
+        </mat-form-field>
+        <mat-form-field class="rowInputItem" (change)="updateScores();" [(ngModel)]="scoreService.players.scores2[5]" name="player2hole6" ngDefaultControl>
+          <input matInput  [value]="this.scoreService.players.scores2[5]">
+        </mat-form-field>
+        <mat-form-field class="rowInputItem" (change)="updateScores();" [(ngModel)]="scoreService.players.scores2[6]" name="player2hole7" ngDefaultControl>
+          <input matInput  [value]="this.scoreService.players.scores2[6]">
+        </mat-form-field>
+        <mat-form-field class="rowInputItem" (change)="updateScores();" [(ngModel)]="scoreService.players.scores2[7]" name="player2hole8" ngDefaultControl>
+          <input matInput  [value]="this.scoreService.players.scores2[7]">
+        </mat-form-field>
+        <mat-form-field class="rowInputItem" (change)="updateScores();" [(ngModel)]="scoreService.players.scores2[8]" name="player2hole9" ngDefaultControl>
+          <input matInput [value]="this.scoreService.players.scores2[8]">
+        </mat-form-field>
+      </div>
+      <div class="rowItem"><span class="rowText">{{this.inScorePlayer2}}</span></div>
+      <div class="inputContainer">
+        <mat-form-field class="rowInputItem" (change)="updateScores();" [(ngModel)]="scoreService.players.scores2[9]" name="player2hole10" ngDefaultControl>
+          <input matInput  [value]="this.scoreService.players.scores2[9]">
+        </mat-form-field>
+        <mat-form-field class="rowInputItem" (change)="updateScores();" [(ngModel)]="scoreService.players.scores2[10]" name="player2hole11" ngDefaultControl>
+          <input matInput  [value]="this.scoreService.players.scores2[10]">
+        </mat-form-field>
+        <mat-form-field class="rowInputItem" (change)="updateScores();" [(ngModel)]="scoreService.players.scores2[11]" name="player2hole12" ngDefaultControl>
+          <input matInput  [value]="this.scoreService.players.scores2[11]">
+        </mat-form-field>
+        <mat-form-field class="rowInputItem" (change)="updateScores();" [(ngModel)]="scoreService.players.scores2[12]" name="player2hole13" ngDefaultControl>
+          <input matInput  [value]="this.scoreService.players.scores2[12]">
+        </mat-form-field>
+        <mat-form-field class="rowInputItem" (change)="updateScores();" [(ngModel)]="scoreService.players.scores2[13]" name="player2hole14" ngDefaultControl>
+          <input matInput  [value]="this.scoreService.players.scores2[13]">
+        </mat-form-field>
+        <mat-form-field class="rowInputItem" (change)="updateScores();" [(ngModel)]="scoreService.players.scores2[14]" name="player2hole15" ngDefaultControl>
+          <input matInput  [value]="this.scoreService.players.scores2[14]">
+        </mat-form-field>
+        <mat-form-field class="rowInputItem" (change)="updateScores();" [(ngModel)]="scoreService.players.scores2[15]" name="player2hole16" ngDefaultControl>
+          <input matInput  [value]="this.scoreService.players.scores2[15]">
+        </mat-form-field>
+        <mat-form-field class="rowInputItem" (change)="updateScores();" [(ngModel)]="scoreService.players.scores2[16]" name="player2hole17" ngDefaultControl>
+          <input matInput [value]="this.scoreService.players.scores2[16]">
+        </mat-form-field>
+        <mat-form-field class="rowInputItem" (change)="updateScores();" [(ngModel)]="scoreService.players.scores2[17]" name="player2hole18" ngDefaultControl>
+          <input matInput [value]="this.scoreService.players.scores2[17]">
+        </mat-form-field>
+      </div>
+      <div class="rowItem"><span class="rowText">{{this.outScorePlayer2}}</span></div>
+      <div class="rowItem"><span class="rowText">{{this.scoreService.players.totalScore2}}</span></div>
     </div>
 
 
+    <div class="playerContainer">
+      <div class="firstRowItem"><span class="rowText">{{this.scoreService.players.player3}}</span></div>
+      <div class="inputContainer">
+        <mat-form-field class="rowInputItem" (change)="updateScores();" [(ngModel)]="scoreService.players.scores3[0]" name="player3hole1" ngDefaultControl>
+          <input matInput [value]="this.scoreService.players.scores3[0]">
+        </mat-form-field>
+        <mat-form-field class="rowInputItem" (change)="updateScores();" [(ngModel)]="scoreService.players.scores3[1]" name="player3hole2" ngDefaultControl>
+          <input matInput [value]="this.scoreService.players.scores3[1]">
+        </mat-form-field>
+        <mat-form-field class="rowInputItem" (change)="updateScores();" [(ngModel)]="scoreService.players.scores3[2]" name="player3hole3" ngDefaultControl>
+          <input matInput [value]="this.scoreService.players.scores3[2]">
+        </mat-form-field>
+        <mat-form-field class="rowInputItem" (change)="updateScores();" [(ngModel)]="scoreService.players.scores3[3]" name="player3hole4" ngDefaultControl>
+          <input matInput [value]="this.scoreService.players.scores3[3]">
+        </mat-form-field>
+        <mat-form-field class="rowInputItem" (change)="updateScores();" [(ngModel)]="scoreService.players.scores3[4]" name="player3hole5" ngDefaultControl>
+          <input matInput [value]="this.scoreService.players.scores3[4]">
+        </mat-form-field>
+        <mat-form-field class="rowInputItem" (change)="updateScores();" [(ngModel)]="scoreService.players.scores3[5]" name="player3hole6" ngDefaultControl>
+          <input matInput [value]="this.scoreService.players.scores3[5]">
+        </mat-form-field>
+        <mat-form-field class="rowInputItem" (change)="updateScores();" [(ngModel)]="scoreService.players.scores3[6]" name="player3hole7" ngDefaultControl>
+          <input matInput [value]="this.scoreService.players.scores3[6]">
+        </mat-form-field>
+        <mat-form-field class="rowInputItem" (change)="updateScores();" [(ngModel)]="scoreService.players.scores3[7]" name="player3hole8" ngDefaultControl>
+          <input matInput [value]="this.scoreService.players.scores3[7]">
+        </mat-form-field>
+        <mat-form-field class="rowInputItem" (change)="updateScores();" [(ngModel)]="scoreService.players.scores3[8]" name="player3hole9" ngDefaultControl>
+          <input matInput [value]="this.scoreService.players.scores3[8]">
+        </mat-form-field>
+      </div>
+      <div class="rowItem"><span class="rowText">{{this.inScorePlayer3}}</span></div>
+      <div class="inputContainer">
+        <mat-form-field class="rowInputItem" (change)="updateScores();" [(ngModel)]="scoreService.players.scores3[9]" name="player3hole10" ngDefaultControl>
+          <input matInput [value]="this.scoreService.players.scores3[9]">
+        </mat-form-field>
+        <mat-form-field class="rowInputItem" (change)="updateScores();" [(ngModel)]="scoreService.players.scores3[10]" name="player3hole11" ngDefaultControl>
+          <input matInput [value]="this.scoreService.players.scores3[10]">
+        </mat-form-field>
+        <mat-form-field class="rowInputItem" (change)="updateScores();" [(ngModel)]="scoreService.players.scores3[11]" name="player3hole12" ngDefaultControl>
+          <input matInput [value]="this.scoreService.players.scores3[11]">
+        </mat-form-field>
+        <mat-form-field class="rowInputItem" (change)="updateScores();" [(ngModel)]="scoreService.players.scores3[12]" name="player3hole13" ngDefaultControl>
+          <input matInput [value]="this.scoreService.players.scores3[12]">
+        </mat-form-field>
+        <mat-form-field class="rowInputItem" (change)="updateScores();" [(ngModel)]="scoreService.players.scores3[13]" name="player3hole14" ngDefaultControl>
+          <input matInput [value]="this.scoreService.players.scores3[13]">
+        </mat-form-field>
+        <mat-form-field class="rowInputItem" (change)="updateScores();" [(ngModel)]="scoreService.players.scores3[14]" name="player3hole15" ngDefaultControl>
+          <input matInput [value]="this.scoreService.players.scores3[14]">
+        </mat-form-field>
+        <mat-form-field class="rowInputItem" (change)="updateScores();" [(ngModel)]="scoreService.players.scores3[15]" name="player3hole16" ngDefaultControl>
+          <input matInput [value]="this.scoreService.players.scores3[15]">
+        </mat-form-field>
+        <mat-form-field class="rowInputItem" (change)="updateScores();" [(ngModel)]="scoreService.players.scores3[16]" name="player3hole17" ngDefaultControl>
+          <input matInput [value]="this.scoreService.players.scores3[16]">
+        </mat-form-field>
+        <mat-form-field class="rowInputItem" (change)="updateScores();" [(ngModel)]="scoreService.players.scores3[17]" name="player3hole18" ngDefaultControl>
+          <input matInput [value]="this.scoreService.players.scores3[17]">
+        </mat-form-field>
+      </div>
+      <div class="rowItem"><span class="rowText">{{this.outScorePlayer3}}</span></div>
+      <div class="rowItem"><span class="rowText">{{this.scoreService.players.totalScore3}}</span></div>
+    </div>
+
+
+    <div class="playerContainer">
+      <div class="firstRowItem last"><span class="rowText">{{this.scoreService.players.player4}}</span></div>
+      <div class="inputContainer">
+        <mat-form-field class="rowInputItem" (change)="updateScores();" [(ngModel)]="scoreService.players.scores4[0]" name="player4hole1" ngDefaultControl>
+          <input matInput [value]="this.scoreService.players.scores4[0]">
+        </mat-form-field>
+        <mat-form-field class="rowInputItem" (change)="updateScores();" [(ngModel)]="scoreService.players.scores4[1]" name="player4hole2" ngDefaultControl>
+          <input matInput [value]="this.scoreService.players.scores4[1]">
+        </mat-form-field>
+        <mat-form-field class="rowInputItem" (change)="updateScores();" [(ngModel)]="scoreService.players.scores4[2]" name="player4hole3" ngDefaultControl>
+          <input matInput [value]="this.scoreService.players.scores4[2]">
+        </mat-form-field>
+        <mat-form-field class="rowInputItem" (change)="updateScores();" [(ngModel)]="scoreService.players.scores4[3]" name="player4hole4" ngDefaultControl>
+          <input matInput [value]="this.scoreService.players.scores4[3]">
+        </mat-form-field>
+        <mat-form-field class="rowInputItem" (change)="updateScores();" [(ngModel)]="scoreService.players.scores4[4]" name="player4hole5" ngDefaultControl>
+          <input matInput [value]="this.scoreService.players.scores4[4]">
+        </mat-form-field>
+        <mat-form-field class="rowInputItem" (change)="updateScores();" [(ngModel)]="scoreService.players.scores4[5]" name="player4hole6" ngDefaultControl>
+          <input matInput [value]="this.scoreService.players.scores4[5]">
+        </mat-form-field>
+        <mat-form-field class="rowInputItem" (change)="updateScores();" [(ngModel)]="scoreService.players.scores4[6]" name="player4hole7" ngDefaultControl>
+          <input matInput [value]="this.scoreService.players.scores4[6]">
+        </mat-form-field>
+        <mat-form-field class="rowInputItem" (change)="updateScores();" [(ngModel)]="scoreService.players.scores4[7]" name="player4hole8" ngDefaultControl>
+          <input matInput [value]="this.scoreService.players.scores4[7]">
+        </mat-form-field>
+        <mat-form-field class="rowInputItem" (change)="updateScores();" [(ngModel)]="scoreService.players.scores4[8]" name="player4hole9" ngDefaultControl>
+          <input matInput [value]="this.scoreService.players.scores4[8]">
+        </mat-form-field>
+      </div>
+      <div class="rowItem last"><span class="rowText">{{this.inScorePlayer4}}</span></div>
+      <div class="inputContainer">
+        <mat-form-field class="rowInputItem" (change)="updateScores();" [(ngModel)]="scoreService.players.scores4[9]" name="player4hole10" ngDefaultControl>
+          <input matInput [value]="this.scoreService.players.scores4[9]">
+        </mat-form-field>
+        <mat-form-field class="rowInputItem" (change)="updateScores();" [(ngModel)]="scoreService.players.scores4[10]" name="player4hole11" ngDefaultControl>
+          <input matInput [value]="this.scoreService.players.scores4[10]">
+        </mat-form-field>
+        <mat-form-field class="rowInputItem" (change)="updateScores();" [(ngModel)]="scoreService.players.scores4[11]" name="player4hole12" ngDefaultControl>
+          <input matInput [value]="this.scoreService.players.scores4[11]">
+        </mat-form-field>
+        <mat-form-field class="rowInputItem" (change)="updateScores();" [(ngModel)]="scoreService.players.scores4[12]" name="player4hole13" ngDefaultControl>
+          <input matInput [value]="this.scoreService.players.scores4[12]">
+        </mat-form-field>
+        <mat-form-field class="rowInputItem" (change)="updateScores();" [(ngModel)]="scoreService.players.scores4[13]" name="player4hole14" ngDefaultControl>
+          <input matInput [value]="this.scoreService.players.scores4[13]">
+        </mat-form-field>
+        <mat-form-field class="rowInputItem" (change)="updateScores();" [(ngModel)]="scoreService.players.scores4[14]" name="player4hole15" ngDefaultControl>
+          <input matInput [value]="this.scoreService.players.scores4[14]">
+        </mat-form-field>
+        <mat-form-field class="rowInputItem" (change)="updateScores();" [(ngModel)]="scoreService.players.scores4[15]" name="player4hole16" ngDefaultControl>
+          <input matInput [value]="this.scoreService.players.scores4[15]">
+        </mat-form-field>
+        <mat-form-field class="rowInputItem" (change)="updateScores();" [(ngModel)]="scoreService.players.scores4[16]" name="player4hole17" ngDefaultControl>
+          <input matInput [value]="this.scoreService.players.scores4[16]">
+        </mat-form-field>
+        <mat-form-field class="rowInputItem" (change)="updateScores();" [(ngModel)]="scoreService.players.scores4[17]" name="player4hole18" ngDefaultControl>
+          <input matInput [value]="this.scoreService.players.scores4[17]">
+        </mat-form-field>
+      </div>
+      <div class="rowItem last"><span class="rowText">{{this.outScorePlayer4}}</span></div>
+      <div class="rowItem last"><span class="rowText">{{this.scoreService.players.totalScore4}}</span></div>
+    </div>
+    <button class="saveButton" mat-raised-button color="primary" (click)="storeGame()">Save Game</button>
   </div>
 </div>

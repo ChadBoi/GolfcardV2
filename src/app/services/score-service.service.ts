@@ -15,15 +15,16 @@ export class ScoreServiceService {
     totalScore2: 0,
     totalScore3: 0,
     totalScore4: 0,
-    scores1: [],
-    scores2: [],
-    scores3: [],
-    scores4: []
+    scores1: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+    scores2: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+    scores3: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+    scores4: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
   };
   gameInfo: Game = {
     teeType: '',
     courseID: '',
-    holes: []
+    holes: [],
+    courseName: ''
   }
   constructor() { }
 }
