@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { ApiServiceService } from '../services/api-service.service';
+import {Router} from '@angular/router';
+import {ScoreServiceService} from '../services/score-service.service';
 
 @Component({
   selector: 'app-card-page',
@@ -8,7 +9,9 @@ import { ApiServiceService } from '../services/api-service.service';
 })
 export class CardPageComponent implements OnInit {
 
-  constructor(api: ApiServiceService) { }
+  constructor(private router: Router, private scoreService: ScoreServiceService) {
+
+  }
 
   ngOnInit() {
   }

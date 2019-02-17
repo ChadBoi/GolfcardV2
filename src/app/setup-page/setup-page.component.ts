@@ -21,9 +21,9 @@ export class SetupPageComponent implements OnInit {
     {name: `Men's`, id: '2'},
     {name: `Women's`, id: '3'}
   ];
-
-  constructor(private router: Router,
-  private scoreService: ScoreServiceService,
+  course = new FormControl();
+  tee = new FormControl();
+  constructor(private router: Router, public scoreService: ScoreServiceService,
   private api: ApiServiceService
   ) { }
 
