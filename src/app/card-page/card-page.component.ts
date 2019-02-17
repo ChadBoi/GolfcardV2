@@ -17,16 +17,16 @@ export class CardPageComponent implements OnInit {
   outScorePlayer2 = 0;
   outScorePlayer3 = 0;
   outScorePlayer4 = 0;
-
+  inPar = 0;
+  outPar = 0;
+  totalPar = 0;
   constructor(private router: Router,
               public scoreService: ScoreServiceService,
               private afs: AngularFirestore) {}
 
   ngOnInit() {
-  this.storeGame();
-  this.updateScores();
+    this.updateScores();
   }
-
   storeGame() {
     this.afs.collection('gameInfo').doc('players').set(this.scoreService.players);
     this.afs.collection('gameInfo').doc('game').set(this.scoreService.gameInfo);

@@ -67,7 +67,7 @@
   top: 10px;
   vertical-align: middle;
 }
-@media (max-width: 1550px) {
+@media (max-width: 1900px) {
   .mainCardContainer, .titleCardContainer, .container, body, html {
     width: 1550px;
   }
