@@ -3,6 +3,12 @@ export interface Player {
   player2: string;
   player3: string;
   player4: string;
-  score: number;
-  id: number;
+  totalScore1: number;
+  totalScore2: number;
+  totalScore3: number;
+  totalScore4: number;
+  scores1: number[];
+  scores2: number[];
+  scores3: number[];
+  scores4: number[];
 }

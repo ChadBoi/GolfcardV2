@@ -11,8 +11,14 @@ export class ScoreServiceService {
     player2: '',
     player3: '',
     player4: '',
-    score: 0,
-    id: 0
+    totalScore1: 0,
+    totalScore2: 0,
+    totalScore3: 0,
+    totalScore4: 0,
+    scores1: [],
+    scores2: [],
+    scores3: [],
+    scores4: []
   };
   gameInfo: Game = {
     teeType: '',

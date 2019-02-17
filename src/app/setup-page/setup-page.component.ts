@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { ScoreServiceService } from '../services/score-service.service';
 import { FormControl, Validators } from '@angular/forms';
 import { ApiServiceService } from '../services/api-service.service';
+import { AngularFirestore } from 'angularfire2/firestore';
 
 @Component({
   selector: 'app-setup-page',
@@ -23,8 +24,10 @@ export class SetupPageComponent implements OnInit {
   ];
   course = new FormControl();
   tee = new FormControl();
-  constructor(private router: Router, public scoreService: ScoreServiceService,
-  private api: ApiServiceService
+  constructor(private router: Router,
+              public scoreService: ScoreServiceService,
+              private api: ApiServiceService,
+              private afs: AngularFirestore
   ) { }
 
   ngOnInit() {
@@ -34,6 +37,16 @@ export class SetupPageComponent implements OnInit {
       for (let i = 0; i < 18; i++){
         this.scoreService.gameInfo.holes[i] = data.data.holes[i].teeBoxes[this.scoreService.gameInfo.teeType];
       }
+    });
+    this.router.navigate(['cardPage']);
+  }
+  async loadCourse(){
+    await this.afs.collection('gameInfo').doc('game').ref.onSnapshot(doc => {
+      this.api.getCourse(doc.data().courseID).subscribe(data => {
+        for (let i = 0; i < 18; i++) {
+          this.scoreService.gameInfo.holes[i] = data.data.holes[i].teeBoxes[doc.data().teeType];
+        }
+      });
     });
     this.router.navigate(['cardPage']);
   }
