@@ -1,35 +1,38 @@
 <head>
-
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
 </head>
-<div class="setup-container">
-  <div class="form-container">
-      <mat-form-field class="playerInput" [(ngModel)]="scoreService.players.player1" name="player1" ngDefaultControl>
-        <input matInput placeholder="Enter Player Name">
-      </mat-form-field>
-      <mat-form-field class="playerInput" [(ngModel)]="scoreService.players.player2" name="player2" ngDefaultControl>
-        <input matInput placeholder="Enter Player Name">
-      </mat-form-field>
-      <mat-form-field class="playerInput" [(ngModel)]="scoreService.players.player3" name="player3" ngDefaultControl>
-        <input matInput placeholder="Enter Player Name">
-      </mat-form-field>
-      <mat-form-field class="playerInput" [(ngModel)]="scoreService.players.player4" name="player4" ngDefaultControl>
-        <input matInput placeholder="Enter Player Name">
-      </mat-form-field>
-      <mat-form-field [formControl]="course" name="course" ngDefaultControl>
-        <mat-select class="courseSelect" placeholder="Select Course" [(ngModel)]="scoreService.gameInfo.courseID">
-          <mat-option *ngFor="let course of courses" [value]="course.id">
-            {{ course.name }}
+<div class="container">
+  <div class="setup-container">
+    <div class="form-container">
+        <mat-form-field class="dataInput" [(ngModel)]="scoreService.players.player1" name="player1" ngDefaultControl>
+          <input matInput placeholder="Enter Player Name">
+        </mat-form-field>
+        <mat-form-field class="dataInput" [(ngModel)]="scoreService.players.player2" name="player2" ngDefaultControl>
+          <input matInput placeholder="Enter Player Name">
+        </mat-form-field>
+        <mat-form-field class="dataInput" [(ngModel)]="scoreService.players.player3" name="player3" ngDefaultControl>
+          <input matInput placeholder="Enter Player Name">
+        </mat-form-field>
+        <mat-form-field class="dataInput" [(ngModel)]="scoreService.players.player4" name="player4" ngDefaultControl>
+          <input matInput placeholder="Enter Player Name">
+        </mat-form-field>
+        <mat-form-field class="dataInput" [formControl]="course" name="course" ngDefaultControl>
+          <mat-select class="courseSelect" placeholder="Select Course" [(ngModel)]="scoreService.gameInfo.courseID">
+            <mat-option *ngFor="let course of courses" [value]="course.id">
+              {{ course.name }}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+      <mat-form-field class="dataInput" [formControl]="tee" name="tee" ngDefaultControl>
+        <mat-select class="courseSelect" placeholder="Select Tee" [(ngModel)]="scoreService.gameInfo.teeType">
+          <mat-option *ngFor="let tee of tees" [value]="tee.id">
+            {{ tee.name }}
           </mat-option>
         </mat-select>
       </mat-form-field>
-    <mat-form-field [formControl]="tee" name="tee" ngDefaultControl>
-      <mat-select class="courseSelect" placeholder="Select Tee" [(ngModel)]="scoreService.gameInfo.teeType">
-        <mat-option *ngFor="let tee of tees" [value]="tee.id">
-          {{ tee.name }}
-        </mat-option>
-      </mat-select>
-
-    </mat-form-field>
-    <button mat-raised-button color="primary" (click)="logName();">Primary</button>
+      <div class="submitButtonWrapper  mat-form-field ng-tns-c2-6 mat-primary mat-form-field-type-mat-select ng-untouched ng-pristine mat-form-field-appearance-legacy mat-form-field-can-float mat-form-field-has-label mat-form-field-hide-placeholder ng-valid">
+        <button class="submitButton" mat-raised-button color="primary" (click)="createCourse()">Submit</button>
+      </div>
+    </div>
   </div>
 </div>

@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 
 @Injectable({
@@ -10,7 +11,7 @@ export class ApiServiceService {
 
   apiURL = 'https://golf-courses-api.herokuapp.com/courses/';
 
-  getCourse(courseID) {
+  getCourse(courseID): Observable<any> {
     let courseURL = this.apiURL + `${courseID}`;
     return this.http.get(courseURL);
   }

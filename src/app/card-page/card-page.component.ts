@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ApiServiceService } from '../services/api-service.service';
 
 @Component({
   selector: 'app-card-page',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CardPageComponent implements OnInit {
 
-  constructor() { }
+  constructor(api: ApiServiceService) { }
 
   ngOnInit() {
   }

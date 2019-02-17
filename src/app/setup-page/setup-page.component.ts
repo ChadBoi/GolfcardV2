@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ScoreServiceService } from '../services/score-service.service';
 import { FormControl, Validators } from '@angular/forms';
+import { ApiServiceService } from '../services/api-service.service';
 
 @Component({
   selector: 'app-setup-page',
@@ -10,9 +11,9 @@ import { FormControl, Validators } from '@angular/forms';
 })
 export class SetupPageComponent implements OnInit {
   courses = [
-    {name: 'Fox Hollow', id: '0'},
-    {name: 'Thanksgiving Point', id: '1'},
-    {name: 'Spanish Oaks', id: '2'}
+    {name: 'Fox Hollow', id: '18300'},
+    {name: 'Thanksgiving Point', id: '11819'},
+    {name: 'Spanish Oaks', id: '19002'}
   ];
   tees = [
     {name: 'Pro', id: '0'},
@@ -21,21 +22,19 @@ export class SetupPageComponent implements OnInit {
     {name: `Women's`, id: '3'}
   ];
 
-    player1 = new FormControl('', [Validators.required]);
-    player2  = new FormControl();
-    player3 = new FormControl();
-    player4 = new FormControl();
-    course = new FormControl('', [Validators.required]);
-    tee = new FormControl('', [Validators.required]);
-
   constructor(private router: Router,
-  private scoreService: ScoreServiceService
+  private scoreService: ScoreServiceService,
+  private api: ApiServiceService
   ) { }
 
   ngOnInit() {
   }
-  logName() {
-    console.log(this.scoreService.players.player1);
-    console.log(this.scoreService.gameInfo.teeType);
+  createCourse() {
+    this.api.getCourse(this.scoreService.gameInfo.courseID).subscribe(data => {
+      for (let i = 0; i < 18; i++){
+        this.scoreService.gameInfo.holes[i] = data.data.holes[i].teeBoxes[this.scoreService.gameInfo.teeType];
+      }
+    });
+    this.router.navigate(['cardPage']);
   }
 }

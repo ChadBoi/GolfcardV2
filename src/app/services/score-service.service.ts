@@ -16,7 +16,8 @@ export class ScoreServiceService {
   };
   gameInfo: Game = {
     teeType: '',
-    courseID: ''
+    courseID: '',
+    holes: []
   }
   constructor() { }
 }

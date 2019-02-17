@@ -16,7 +16,7 @@ import {
 import { AppComponent } from './app.component';
 import { SetupPageComponent } from './setup-page/setup-page.component';
 import { CardPageComponent } from './card-page/card-page.component';
-import {AppRoutingModule} from './app-routing.module';
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [
